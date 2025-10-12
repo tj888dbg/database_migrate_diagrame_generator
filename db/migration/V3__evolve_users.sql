@@ -9,7 +9,6 @@ ALTER TABLE public.users DROP COLUMN last_login;
 ALTER TABLE public.users RENAME COLUMN name TO full_name;
 
 ALTER TABLE public.users ADD CONSTRAINT users_email_unique UNIQUE (email);
-ALTER TABLE public.users RENAME CONSTRAINT users_email_unique TO users_email_unq;
 ALTER TABLE public.users DROP CONSTRAINT users_email_unq;
 ALTER TABLE public.users ADD CONSTRAINT users_email_status_unique UNIQUE (email, status);
 
